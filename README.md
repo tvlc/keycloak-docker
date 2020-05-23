@@ -1,12 +1,13 @@
-# Using Nginx as reverse proxy for Keycloak
+# Deploy Keycloak SSO Server with Letsencrypt Nginx Proxy
 
-Simply run
+## Clone the Repository
+```
+git clone https://github.com/cybergate-services/keycloak-docker.git /opt/keycloak
+```
+## Deploy with docker-compose
 
 ```
-docker-compose up
+cd /opt/keycloak
+docker-compose up -d
 ```
 
-This command starts	 Nginx, Keycloak and the proper database.
-The Nginx configuration can be found in `nginx.conf`.
-
-Accessing [http://localhost:8080/keycloak/auth/](http://localhost:8080/keycloak/auth/) will open the administration UI of Keycloak. The credentials are "admin" and "password".
